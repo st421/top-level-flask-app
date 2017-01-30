@@ -9,6 +9,7 @@ app = create_app()
 
 @app.route('/')
 def index():
+    app.logger.debug(app.url_map)
     return redirect(url_for('slt.index'))
     
 @app.teardown_appcontext
